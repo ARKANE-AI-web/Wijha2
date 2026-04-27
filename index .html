@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>وِجهة — Pitch Deck الاستثماري</title>
+<meta name="description" content="منصة الذكاء الاصطناعي الأولى في السعودية لتحويل الفجوات المهارية إلى مسارات وظيفية حقيقية" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0e27;
+  --bg-2:#0f1538;
+  --ink:#ffffff;
+  --ink-2:#cfd6ff;
+  --muted:#8a92c4;
+  --gold:#d4af37;
+  --gold-2:#f4d56b;
+  --green:#1ed897;
+  --red:#ff4d6d;
+  --blue:#4dabf7;
+  --purple:#9b59ff;
+  --card:rgba(255,255,255,0.04);
+  --card-bd:rgba(255,255,255,0.08);
+  --grad-3:linear-gradient(135deg,#d4af37 0%,#f4d56b 100%);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Tajawal',sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.7;
+  overflow-x:hidden;
+}
+body::before{
+  content:"";
+  position:fixed;inset:0;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(155,89,255,.15), transparent 40%),
+    radial-gradient(circle at 80% 80%, rgba(30,216,151,.12), transparent 40%);
+  z-index:-1;
+}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+/* NAV */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(10,14,39,.85);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--card-bd);
+}
+.nav-wrap{display:flex;justify-content:space-between;align-items:center;padding:16px 24px;max-width:1200px;margin:0 auto}
+.logo{font-family:'Cairo';font-weight:900;font-size:24px;background:var(--grad-3);-webkit-background-clip:text;background-clip:text;color:transparent}
+.nav-links{display:flex;gap:24px;list-style:none}
+.nav-links a{color:var(--ink-2);text-decoration:none;font-size:14px}
+@media(max-width:768px){.nav-links{display:none}}
+
+/* HERO */
+.hero{
+  min-height:100vh;display:flex;align-items:center;
+  padding:120px 24px 60px;
+}
+.hero-grid{
+  display:grid;grid-template-columns:1fr;gap:48px;align-items:center;
+  max-width:1200px;margin:0 auto;width:100%;
+}
+.badge{
+  display:inline-block;
+  padding:8px 18px;
+  border:1px solid var(--gold);
+  border-radius:100px;
+  color:var(--gold-2);
+  font-size:13px;font-weight:500;
+  margin-bottom:24px;
+  letter-spacing:1px;
+}
+.hero h1{
+  font-family:'Cairo';
+  font-size:clamp(56px,9vw,120px);
+  font-weight:900;
+  line-height:1;
+  margin-bottom:24px;
+  background:linear-gradient(135deg,#fff 0%,#d4af37 50%,#fff 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  letter-spacing:-2px;
+}
+.hero-sub{
+  font-size:clamp(18px,2.2vw,26px);
+  color:var(--ink-2);
+  margin-bottom:40px;
+  max-width:800px;
+}
+.hero-tag{
+  font-family:'Cairo';
+  font-size:14px;
+  letter-spacing:6px;
+  color:var(--gold);
+  margin-bottom:16px;
+}
+.hero-stats{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:16px;
+  margin-top:48px;
+}
+@media(max-width:768px){.hero-stats{grid-template-columns:repeat(2,1fr)}}
+.stat-mini{
+  padding:24px 12px;
+  background:var(--card);
+  border:1px solid var(--card-bd);
+  border-radius:16px;
+  text-align:center;
+}
+.stat-num{
+  font-family:'Cairo';font-weight:900;
+  font-size:clamp(22px,4vw,34px);
+  background:var(--grad-3);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.stat-lbl{font-size:12px;color:var(--muted);margin-top:6px}
+
+/* SECTION */
+section{padding:80px 0}
+.section-num{
+  font-family:'Cairo';font-size:14px;letter-spacing:4px;
+  color:var(--gold);margin-bottom:12px;display:block;
+}
+.section-title{
+  font-family:'Cairo';font-weight:900;
+  font-size:clamp(32px,5vw,52px);
+  line-height:1.1;margin-bottom:20px;
+}
+.section-intro{
+  font-size:clamp(15px,1.6vw,18px);
+  color:var(--ink-2);
+  max-width:780px;margin-bottom:48px;
+}
+
+/* PROBLEM */
+.prob-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:16px;
+}
+.prob-card{
+  padding:28px 24px;
+  background:var(--card);
+  border:1px solid var(--card-bd);
+  border-radius:20px;
+}
+.prob-icon{font-size:28px;margin-bottom:14px}
+.prob-num{
+  font-family:'Cairo';font-weight:900;
+  font-size:38px;color:var(--red);
+  margin-bottom:8px;
+}
+.prob-card h4{font-size:16px;margin-bottom:10px}
+.prob-card p{font-size:13px;color:var(--muted)}
+
+/* SOLUTION */
+.sol-intro{
+  background:var(--card);
+  border:1px solid var(--gold);
+  border-radius:20px;
+  padding:24px;
+  margin-bottom:32px;
+  text-align:center;
+  font-size:15px;
+}
+.sol-intro strong{color:var(--gold-2)}
+
+.sol-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:16px;
+}
+.sol-card{
+  padding:24px 20px;
+  background:linear-gradient(135deg,rgba(212,175,55,.04) 0%,rgba(155,89,255,.04) 100%);
+  border:1px solid var(--card-bd);
+  border-radius:20px;
+}
+.sol-icon{font-size:30px;margin-bottom:12px}
+.sol-card h4{font-family:'Cairo';font-size:17px;margin-bottom:10px;color:var(--gold-2)}
+.sol-card p{font-size:13px;color:var(--ink-2)}
+.sol-tag{
+  display:inline-block;font-size:10px;
+  padding:3px 10px;border-radius:100px;
+  background:rgba(30,216,151,.15);color:var(--green);
+  margin-bottom:10px;font-weight:700;
+}
+.sol-tag.gov{background:rgba(212,175,55,.15);color:var(--gold-2)}
+.sol-tag.b2c{background:rgba(155,89,255,.15);color:var(--purple)}
+.sol-tag.b2b{background:rgba(77,171,247,.15);color:var(--blue)}
+.sol-tag.impact{background:rgba(255,77,109,.15);color:var(--red)}
+
+/* HOW IT WORKS */
+.flow{
+  margin-top:40px;
+  padding:32px 20px;
+  background:var(--card);
+  border:1px solid var(--card-bd);
+  border-radius:20px;
+}
+.flow h3{font-family:'Cairo';font-size:20px;margin-bottom:24px;text-align:center}
+.flow-steps{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+  gap:12px;
+}
+.flow-step{
+  text-align:center;padding:18px 10px;
+  background:rgba(0,0,0,.2);
+  border-radius:14px;
+}
+.flow-num{
+  width:32px;height:32px;line-height:32px;
+  border-radius:50%;
+  background:var(--grad-3);color:#000;
+  font-weight:900;font-family:'Cairo';
+  margin:0 auto 10px;
+}
+.flow-step p{font-size:12px;color:var(--ink-2)}
+
+/* MARKET */
+.market-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:40px;
+}
+@media(max-width:768px){.market-grid{grid-template-columns:1fr}}
+.market-card{
+  padding:28px 20px;
+  background:var(--card);
+  border:1px solid var(--card-bd);
+  border-radius:20px;
+  text-align:center;
+}
+.market-label{font-size:12px;color:var(--muted);letter-spacing:2px}
+.market-num{
+  font-family:'Cairo';font-weight:900;
+  font-size:42px;
+  margin:10px 0;
+  background:var(--grad-3);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.market-desc{font-size:13px;color:var(--ink-2)}
+
+/* GROWTH BARS - Pure CSS, no Chart.js */
+.growth-card{
+  background:var(--card);
+  border:1px solid var(--card-bd);
+  border-radius:20px;
+  padding:28px 20px;
+  margin-top:24px;
+}
+.growth-card h3{
+  font-family:'Cairo';font-size:18px;margin-bottom:24px;
+  text-align:center;color:var(--gold-2);
+}
+.growth-bars{display:flex;flex-direction:column;gap:14px}
+.growth-row{display:flex;align-items:center;gap:12px}
+.growth-year{
+  font-family:'Cairo';font-weight:700;font-size:13px;
+  width:70px;color:var(--ink-2);flex-shrink:0;
+}
+.growth-bar-wrap{
+  flex:1;height:32px;
+  background:rgba(255,255,255,.04);
+  border-radius:8px;overflow:hidden;
+  position:relative;
+}
+.growth-bar{
+  height:100%;
+  background:var(--grad-3);
+  border-radius:8px;
+  display:flex;align-items:center;
+  padding:0 12px;
+  font-family:'Cairo';font-weight:900;font-size:13px;
+  color:#000;
+}
+
+/* COMPETITORS */
+.comp-table{
+  background:var(--card);
+  border:1px solid var(--card-bd);
+  border-radius:20px;
+  overflow-x:auto;margin-bottom:24px;
+  -webkit-overflow-scrolling:touch;
+}
+.comp-table table{width:100%;border-collapse:collapse;min-width:720px}
+.comp-table th{
+  padding:14px 10px;text-align:right;
+  background:rgba(0,0,0,.3);
+  font-family:'Cairo';font-size:12px;
+  border-bottom:2px solid var(--gold);
+  color:var(--gold-2);
+}
+.comp-table td{padding:14px 10px;border-bottom:1px solid var(--card-bd);font-size:13px}
+.comp-table tr.highlight{background:rgba(212,175,55,.06)}
+.comp-table tr.highlight td:first-child{color:var(--gold-2);font-weight:700}
+.check{color:var(--green);font-weight:900;font-size:16px}
+.cross{color:var(--red);font-weight:900;font-size:16px}
+.partial{color:var(--gold);font-weight:900;font-size:16px}
+.scroll-hint{
+  font-size:11px;color:var(--muted);
+  text-align:center;margin-bottom:8px;
+}
+
+/* REVENUE */
+.rev-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:16px;margin-bottom:32px;
+}
+.rev-card{
+  padding:24px 20px;
+  background:var(--card);
+  border:1px solid var(--card-bd);
+  border-radius:20px;
+}
+.rev-icon{font-size:28px;margin-bottom:12px}
+.rev-amount{
+  font-family:'Cairo';font-weight:900;
+  font-size:32px;color:var(--green);margin:6px 0;
+}
+.rev-card h4{font-size:15px;margin-bottom:8px}
+.rev-card p{font-size:12px;color:var(--muted)}
+.rev-totals{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:14px;
+}
+@media(max-width:768px){.rev-totals{grid-template-columns:repeat(2,1fr)}}
+.rev-total{
+  text-align:center;padding:20px 12px;
+  background:linear-gradient(180deg,rgba(212,175,55,.1) 0%,transparent 100%);
+  border:1px solid var(--gold);
+  border-radius:14px;
+}
+.rev-total-num{font-family:'Cairo';font-weight:900;font-size:28px;color:var(--gold-2)}
+.rev-total-lbl{font-size:12px;color:var(--ink-2);margin-top:6px}
+
+/* DISTRIBUTION - Pure CSS */
+.dist-card{
+  background:var(--card);
+  border:1px solid var(--card-bd);
+  border-radius:20px;
+  padding:28px 20px;
+  margin-top:24px;
+}
+.dist-card h3{
+  font-family:'Cairo';font-size:18px;margin-bottom:24px;
+  text-align:center;color:var(--gold-2);
+}
+.dist-bars{display:flex;flex-direction:column;gap:16px}
+.dist-row{display:flex;flex-direction:column;gap:6px}
+.dist-label{display:flex;justify-content:space-between;font-size:13px}
+.dist-label strong{font-family:'Cairo';font-weight:700}
+.dist-bar-wrap{
+  height:14px;
+  background:rgba(255,255,255,.04);
+  border-radius:7px;overflow:hidden;
+}
+.dist-bar{height:100%;border-radius:7px}
+
+/* VISION */
+.vision-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:16px;
+}
+.vision-card{
+  padding:24px;
+  background:var(--card);
+  border:1px solid var(--card-bd);
+  border-radius:20px;
+}
+.vision-icon{font-size:28px;margin-bottom:12px}
+.vision-card h4{font-family:'Cairo';font-size:16px;margin-bottom:8px}
+.vision-card p{font-size:13px;color:var(--ink-2)}
+
+/* ROADMAP */
+.roadmap{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:16px;
+}
+.phase{
+  padding:24px;
+  background:var(--card);
+  border:1px solid var(--card-bd);
+  border-radius:20px;
+}
+.phase-tag{
+  display:inline-block;
+  padding:4px 12px;border-radius:100px;
+  background:var(--grad-3);color:#000;
+  font-size:11px;font-weight:900;
+  margin-bottom:12px;
+}
+.phase-time{font-size:13px;color:var(--gold-2);margin-bottom:12px;font-weight:700}
+.phase h4{font-family:'Cairo';font-size:16px;margin-bottom:12px}
+.phase ul{list-style:none}
+.phase li{
+  padding:6px 0 6px 16px;
+  font-size:12px;color:var(--ink-2);
+  position:relative;
+}
+.phase li::before{content:"◆";position:absolute;right:0;color:var(--gold);font-size:9px;top:10px}
+
+/* CTA */
+.cta-section{
+  background:linear-gradient(135deg,rgba(212,175,55,.1) 0%,rgba(155,89,255,.1) 100%);
+  border:1px solid var(--gold);
+  border-radius:28px;
+  padding:48px 28px;
+  text-align:center;
+}
+.cta-section h2{
+  font-family:'Cairo';font-weight:900;
+  font-size:clamp(32px,5vw,52px);
+  margin-bottom:16px;
+  background:var(--grad-3);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.cta-tagline{
+  font-size:16px;color:var(--ink-2);
+  margin:20px auto 24px;max-width:680px;
+}
+.cta-includes{
+  font-size:14px;color:var(--ink-2);
+  margin-bottom:28px;line-height:2;
+}
+.cta-stats{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:14px;
+  margin:28px 0;
+}
+@media(max-width:768px){.cta-stats{grid-template-columns:1fr}}
+.cta-stat{
+  padding:18px 12px;
+  background:rgba(0,0,0,.2);
+  border-radius:14px;
+}
+.cta-stat-num{font-family:'Cairo';font-weight:900;font-size:28px;color:var(--gold-2)}
+.cta-stat-lbl{font-size:12px;color:var(--ink-2);margin-top:4px}
+.btn{
+  display:inline-block;
+  padding:16px 40px;
+  background:var(--grad-3);
+  color:#000;font-weight:900;font-family:'Cairo';
+  text-decoration:none;border-radius:100px;
+  font-size:15px;
+}
+
+footer{
+  text-align:center;padding:32px 24px;
+  border-top:1px solid var(--card-bd);
+  font-size:12px;color:var(--muted);
+}
+</style>
+</head>
+<body>
+
+<nav>
+<div class="nav-wrap">
+<div class="logo">وِجهة</div>
+<ul class="nav-links">
+<li><a href="#problem">المشكلة</a></li>
+<li><a href="#solution">الحل</a></li>
+<li><a href="#market">السوق</a></li>
+<li><a href="#competitors">المنافسون</a></li>
+<li><a href="#revenue">الإيرادات</a></li>
+<li><a href="#roadmap">الخطة</a></li>
+<li><a href="#cta">الاستثمار</a></li>
+</ul>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+<div class="hero-grid container">
+<div>
+<div class="badge">ملف العرض الاستثماري — 2026</div>
+<div class="hero-tag">WIJHA — AI CAREER INTELLIGENCE</div>
+<h1>وِجهة</h1>
+<p class="hero-sub">أول منصة ذكاء اصطناعي في السعودية تُحوّل الفجوات المهارية إلى مسارات وظيفية حقيقية وقابلة للقياس — متكاملة مع المنظومة الحكومية وموثّقة بـ Blockchain.</p>
+
+<div class="hero-stats">
+<div class="stat-mini">
+<div class="stat-num">+4M</div>
+<div class="stat-lbl">المستخدم المستهدف</div>
+</div>
+<div class="stat-mini">
+<div class="stat-num">57M</div>
+<div class="stat-lbl">ريال إيرادات (السنة 3)</div>
+</div>
+<div class="stat-mini">
+<div class="stat-num">2030</div>
+<div class="stat-lbl">متوافق مع رؤية المملكة</div>
+</div>
+<div class="stat-mini">
+<div class="stat-num">12</div>
+<div class="stat-lbl">محرك ذكاء اصطناعي</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- PROBLEM -->
+<section id="problem">
+<div class="container">
+<span class="section-num">01 — المشكلة</span>
+<h2 class="section-title">أزمة مُخفية تمسّ الملايين</h2>
+<p class="section-intro">أكثر من 700,000 سعودي وسعودية يتخرجون سنوياً — وكثيرون منهم يبحثون عن عمل لأشهر دون توجيه حقيقي.</p>
+
+<div class="prob-grid">
+<div class="prob-card">
+<div class="prob-icon">🎓</div>
+<div class="prob-num">700K+</div>
+<h4>خريج سنوياً</h4>
+<p>نسبة كبيرة في تخصصات لا تتوافق مع متطلبات السوق، وبلا خريطة واضحة للمستقبل المهني.</p>
+</div>
+
+<div class="prob-card">
+<div class="prob-icon">💼</div>
+<div class="prob-num">8.3%</div>
+<h4>معدل البطالة بين السعوديين</h4>
+<p>رغم الإنفاق الحكومي الضخم على التدريب، البطالة الهيكلية مرتفعة لأن التدريب لا يرتبط بالوظائف الفعلية.</p>
+</div>
+
+<div class="prob-card">
+<div class="prob-icon">📋</div>
+<div class="prob-num">67%</div>
+<h4>من الشركات تعاني نقص الكفاءات</h4>
+<p>الشركات تبحث عن كفاءات مُدرّبة لكنها لا تجدها — والباحثون موجودون لكنهم غير موجَّهين بذكاء.</p>
+</div>
+
+<div class="prob-card">
+<div class="prob-icon">🔄</div>
+<div class="prob-num">40%</div>
+<h4>يريدون تغيير مسارهم المهني</h4>
+<p>مئات آلاف الموظفين يريدون الانتقال لمجالات جديدة لكن لا يعرفون من أين يبدؤون.</p>
+</div>
+
+<div class="prob-card">
+<div class="prob-icon">❌</div>
+<div class="prob-num">0</div>
+<h4>منصة موحّدة تجمع التحليل والتدريب والتوظيف</h4>
+<p>المنصات الموجودة (جدارات، مهارات، طموح) منفصلة وبلا AI يربطها بمسار مخصص.</p>
+</div>
+
+<div class="prob-card">
+<div class="prob-icon">📉</div>
+<div class="prob-num">مليارات</div>
+<h4>خسائر الاقتصاد من الهدر البشري</h4>
+<p>الهدر في رأس المال البشري يكلّف الاقتصاد السعودي مليارات سنوياً — وهذه الفجوة هي فرصة وِجهة.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- SOLUTION -->
+<section id="solution">
+<div class="container">
+<span class="section-num">02 — الحل</span>
+<h2 class="section-title">منظومة ذكاء اصطناعي متكاملة</h2>
+<p class="section-intro">12 محرك ذكاء اصطناعي مقسّمة على 4 طبقات: للفرد · للشركات · للحكومة · للأثر الاجتماعي. مع توثيق Blockchain وشهادة جاهزية تُعوّض شرط "خبرة 3 سنوات".</p>
+
+<div class="sol-grid">
+
+<div class="sol-card">
+<span class="sol-tag b2c">للفرد</span>
+<div class="sol-icon">🔍</div>
+<h4>محرك تحليل الفجوة المهارية</h4>
+<p>AI يُحلّل السيرة والشهادات والخبرات ويقارنها بمتطلبات +50K وظيفة حية ويكشف النواقص.</p>
+</div>
+
+<div class="sol-card">
+<span class="sol-tag b2c">للفرد</span>
+<div class="sol-icon">🗺️</div>
+<h4>خريطة المسار المهني</h4>
+<p>خطة تطوير ذكية بالأيام والأسابيع والأشهر — من الوضع الحالي للهدف.</p>
+</div>
+
+<div class="sol-card">
+<span class="sol-tag b2c">للفرد</span>
+<div class="sol-icon">🤖</div>
+<h4>مُوافق الوظائف الذكي</h4>
+<p>AI يطابق السيرة مع وظائف جدارات تلقائياً بنسبة توافق فعلية، لا كلمات مفتاحية.</p>
+</div>
+
+<div class="sol-card">
+<span class="sol-tag b2c">للفرد</span>
+<div class="sol-icon">💬</div>
+<h4>المرشد المهني AI</h4>
+<p>chatbot بالعربية السعودية يدلّك على المسار المناسب ويقدم نصائح على مدار الساعة.</p>
+</div>
+
+<div class="sol-card">
+<span class="sol-tag b2b">للشركات</span>
+<div class="sol-icon">🏆</div>
+<h4>التحديات المهارية</h4>
+<p>الشركات تنشر تحديات حقيقية، والمستخدمون يُثبتون كفاءتهم بحلّها — والشركات توظّف الفائزين.</p>
+</div>
+
+<div class="sol-card">
+<span class="sol-tag b2c">للفرد</span>
+<div class="sol-icon">🏅</div>
+<h4>شهادة الجاهزية الوطنية</h4>
+<p>شهادة رقمية موثّقة تُعوّض شرط "خبرة 3 سنوات" — معترف بها من الشركات الشريكة.</p>
+</div>
+
+<div class="sol-card">
+<span class="sol-tag gov">حكومي</span>
+<div class="sol-icon">🔗</div>
+<h4>جسر المنصات الحكومية</h4>
+<p>واجهة موحّدة تربط جدارات + دروب + تمهير + Qiwa في تجربة واحدة.</p>
+</div>
+
+<div class="sol-card">
+<span class="sol-tag gov">حكومي</span>
+<div class="sol-icon">📊</div>
+<h4>لوحة فجوات المهارات الوطنية</h4>
+<p>Intelligence dashboard للجهات الحكومية لمعرفة النواقص في كل قطاع — أداة قرار استراتيجية.</p>
+</div>
+
+<div class="sol-card">
+<span class="sol-tag gov">حكومي</span>
+<div class="sol-icon">📈</div>
+<h4>مؤشر جاهزية المناطق</h4>
+<p>رصد لحظي لجاهزية كل منطقة (الرياض 78%، جازان 45%…) لتوجيه الاستثمار التدريبي بدقة.</p>
+</div>
+
+<div class="sol-card">
+<span class="sol-tag impact">أثر اجتماعي</span>
+<div class="sol-icon">♿</div>
+<h4>مسارات ذوي الإعاقة</h4>
+<p>أوّل منصة سعودية متخصصة — فرص عن بُعد ودوام مرن، مع تصنيف ذكي للوظائف حسب نوع الإعاقة.</p>
+</div>
+
+<div class="sol-card">
+<span class="sol-tag impact">أثر اجتماعي</span>
+<div class="sol-icon">🤝</div>
+<h4>دمج الضمان الاجتماعي</h4>
+<p>ربط مستفيدي الضمان بالتدريب والتوظيف تلقائياً — تحويلهم من اعتماد على الدعم إلى مساهمين.</p>
+</div>
+
+<div class="sol-card">
+<span class="sol-tag b2b">للشركات</span>
+<div class="sol-icon">🔐</div>
+<h4>التوثيق الرقمي Blockchain</h4>
+<p>سجل مهاري لا يُزوَّر يُوثّق الشهادات والخبرات على بلوك تشين — لمكافحة التوظيف الوهمي.</p>
+</div>
+
+</div>
+
+<div class="flow">
+<h3>🧠 كيف تعمل وِجهة؟</h3>
+<div class="flow-steps">
+<div class="flow-step"><div class="flow-num">1</div><p>المستخدم يرفع ملفه وأهدافه</p></div>
+<div class="flow-step"><div class="flow-num">2</div><p>AI يحلّل الفجوات في 60 ثانية</p></div>
+<div class="flow-step"><div class="flow-num">3</div><p>إنشاء خريطة مسار شخصية</p></div>
+<div class="flow-step"><div class="flow-num">4</div><p>وصلات تدريب وكورسات</p></div>
+<div class="flow-step"><div class="flow-num">5</div><p>مطابقة وظائف بالـ AI</p></div>
+<div class="flow-step"><div class="flow-num">6</div><p>شهادة جاهزية موثّقة</p></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- MARKET -->
+<section id="market">
+<div class="container">
+<span class="section-num">03 — تحليل السوق</span>
+<h2 class="section-title">سوق ضخم ونمو متسارع</h2>
+<p class="section-intro">سوق التقنية التعليمية والتوظيف في المملكة ينمو بمعدل 18% سنوياً، مدفوعاً برؤية 2030.</p>
+
+<div class="market-grid">
+<div class="market-card">
+<div class="market-label">TAM</div>
+<div class="market-num">12B+</div>
+<div class="market-desc">ريال — إجمالي سوق التعليم والتوظيف التقني</div>
+</div>
+<div class="market-card">
+<div class="market-label">SAM</div>
+<div class="market-num">3.2B</div>
+<div class="market-desc">ريال — منصات التطوير المهني والتوظيف الرقمي</div>
+</div>
+<div class="market-card">
+<div class="market-label">SOM</div>
+<div class="market-num">320M</div>
+<div class="market-desc">ريال — هدف 5 سنوات (10% من SAM)</div>
+</div>
+</div>
+
+<div class="growth-card">
+<h3>📈 توقعات نمو الإيراد السنوي (مليون ريال)</h3>
+<div class="growth-bars">
+<div class="growth-row">
+<div class="growth-year">السنة 1</div>
+<div class="growth-bar-wrap"><div class="growth-bar" style="width:6%">8.5</div></div>
+</div>
+<div class="growth-row">
+<div class="growth-year">السنة 2</div>
+<div class="growth-bar-wrap"><div class="growth-bar" style="width:20%">28</div></div>
+</div>
+<div class="growth-row">
+<div class="growth-year">السنة 3</div>
+<div class="growth-bar-wrap"><div class="growth-bar" style="width:41%">57</div></div>
+</div>
+<div class="growth-row">
+<div class="growth-year">السنة 4</div>
+<div class="growth-bar-wrap"><div class="growth-bar" style="width:68%">95</div></div>
+</div>
+<div class="growth-row">
+<div class="growth-year">السنة 5</div>
+<div class="growth-bar-wrap"><div class="growth-bar" style="width:100%">140</div></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- COMPETITORS -->
+<section id="competitors">
+<div class="container">
+<span class="section-num">04 — تحليل المنافسين</span>
+<h2 class="section-title">وِجهة في مقابل السوق</h2>
+<p class="section-intro">لا يوجد منافس واحد في السعودية يجمع كل هذه العناصر معاً. وِجهة هي الأولى من نوعها.</p>
+
+<div class="scroll-hint">← اسحب الجدول لرؤية كل الأعمدة →</div>
+<div class="comp-table">
+<table>
+<thead>
+<tr>
+<th>المنصة</th>
+<th>تحليل فجوة</th>
+<th>خريطة مسار</th>
+<th>تدريب ذكي</th>
+<th>مطابقة وظائف</th>
+<th>B2B</th>
+<th>جسر حكومي</th>
+<th>Blockchain</th>
+</tr>
+</thead>
+<tbody>
+<tr class="highlight">
+<td>⭐ وِجهة</td>
+<td><span class="check">✓</span></td>
+<td><span class="check">✓</span></td>
+<td><span class="check">✓</span></td>
+<td><span class="check">✓</span></td>
+<td><span class="check">✓</span></td>
+<td><span class="check">✓</span></td>
+<td><span class="check">✓</span></td>
+</tr>
+<tr>
+<td>LinkedIn</td>
+<td><span class="cross">✗</span></td>
+<td><span class="cross">✗</span></td>
+<td><span class="partial">◑</span></td>
+<td><span class="check">✓</span></td>
+<td><span class="check">✓</span></td>
+<td><span class="cross">✗</span></td>
+<td><span class="cross">✗</span></td>
+</tr>
+<tr>
+<td>منصة مهارات</td>
+<td><span class="cross">✗</span></td>
+<td><span class="cross">✗</span></td>
+<td><span class="check">✓</span></td>
+<td><span class="cross">✗</span></td>
+<td><span class="cross">✗</span></td>
+<td><span class="partial">◑</span></td>
+<td><span class="cross">✗</span></td>
+</tr>
+<tr>
+<td>جدارات</td>
+<td><span class="cross">✗</span></td>
+<td><span class="cross">✗</span></td>
+<td><span class="cross">✗</span></td>
+<td><span class="partial">◑</span></td>
+<td><span class="cross">✗</span></td>
+<td><span class="check">✓</span></td>
+<td><span class="cross">✗</span></td>
+</tr>
+<tr>
+<td>طموح</td>
+<td><span class="cross">✗</span></td>
+<td><span class="cross">✗</span></td>
+<td><span class="cross">✗</span></td>
+<td><span class="check">✓</span></td>
+<td><span class="partial">◑</span></td>
+<td><span class="check">✓</span></td>
+<td><span class="cross">✗</span></td>
+</tr>
+<tr>
+<td>Coursera</td>
+<td><span class="cross">✗</span></td>
+<td><span class="cross">✗</span></td>
+<td><span class="check">✓</span></td>
+<td><span class="cross">✗</span></td>
+<td><span class="partial">◑</span></td>
+<td><span class="cross">✗</span></td>
+<td><span class="cross">✗</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+
+<!-- REVENUE -->
+<section id="revenue">
+<div class="container">
+<span class="section-num">05 — نموذج الإيرادات</span>
+<h2 class="section-title">أربعة مصادر دخل متكاملة</h2>
+<p class="section-intro">نموذج هجين يجمع الاشتراكات الشهرية، العقود المؤسسية، العقود الحكومية، وعمولات التدريب.</p>
+
+<div class="rev-grid">
+<div class="rev-card">
+<div class="rev-icon">👤</div>
+<h4>اشتراكات الأفراد (B2C)</h4>
+<div class="rev-amount">17.8M</div>
+<p>ريال — السنة 3. Free → Pro (99 ر) → Premium (299 ر).</p>
+</div>
+<div class="rev-card">
+<div class="rev-icon">🏢</div>
+<h4>عقود المؤسسات (B2B)</h4>
+<div class="rev-amount">24M</div>
+<p>ريال — السنة 3. باقات 5K–25K ر/شهر للموارد البشرية والتحديات.</p>
+</div>
+<div class="rev-card">
+<div class="rev-icon">🏛️</div>
+<h4>العقود الحكومية</h4>
+<div class="rev-amount">10M</div>
+<p>ريال — السنة 3. شراكات مع وزارة الموارد البشرية، هدف، الضمان.</p>
+</div>
+<div class="rev-card">
+<div class="rev-icon">🎓</div>
+<h4>عمولات التدريب</h4>
+<div class="rev-amount">5M</div>
+<p>ريال — السنة 3. 15–30% عمولة على كل كورس عبر شركاء التدريب.</p>
+</div>
+</div>
+
+<div class="rev-totals">
+<div class="rev-total">
+<div class="rev-total-num">57M</div>
+<div class="rev-total-lbl">الإيرادات (السنة 3)</div>
+</div>
+<div class="rev-total">
+<div class="rev-total-num">8.5M</div>
+<div class="rev-total-lbl">الإيرادات (السنة 1)</div>
+</div>
+<div class="rev-total">
+<div class="rev-total-num">35%</div>
+<div class="rev-total-lbl">هامش الربح (السنة 2)</div>
+</div>
+<div class="rev-total">
+<div class="rev-total-num">18 شهر</div>
+<div class="rev-total-lbl">نقطة التعادل</div>
+</div>
+</div>
+
+<div class="dist-card">
+<h3>💰 توزيع الإيرادات بحسب المصدر — السنة 3</h3>
+<div class="dist-bars">
+<div class="dist-row">
+<div class="dist-label"><span>🏢 B2B شركات</span><strong>24M ريال (42%)</strong></div>
+<div class="dist-bar-wrap"><div class="dist-bar" style="width:42%;background:#d4af37"></div></div>
+</div>
+<div class="dist-row">
+<div class="dist-label"><span>👤 B2C أفراد</span><strong>17.8M ريال (31%)</strong></div>
+<div class="dist-bar-wrap"><div class="dist-bar" style="width:31%;background:#9b59ff"></div></div>
+</div>
+<div class="dist-row">
+<div class="dist-label"><span>🏛️ حكومي</span><strong>10M ريال (18%)</strong></div>
+<div class="dist-bar-wrap"><div class="dist-bar" style="width:18%;background:#1ed897"></div></div>
+</div>
+<div class="dist-row">
+<div class="dist-label"><span>🎓 تدريب</span><strong>5M ريال (9%)</strong></div>
+<div class="dist-bar-wrap"><div class="dist-bar" style="width:9%;background:#4dabf7"></div></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- VISION -->
+<section>
+<div class="container">
+<span class="section-num">06 — رؤية 2030</span>
+<h2 class="section-title">شريك استراتيجي لرؤية المملكة</h2>
+<p class="section-intro">وِجهة لا تتوافق مع رؤية 2030 فقط — بل تُساهم مباشرة في تحقيق أهدافها القابلة للقياس.</p>
+
+<div class="vision-grid">
+<div class="vision-card">
+<div class="vision-icon">👥</div>
+<h4>تطوير الموارد البشرية</h4>
+<p>تُسرّع رفع كفاءة القوى العاملة السعودية وتُقلّص الفجوة بين التعليم والسوق.</p>
+</div>
+<div class="vision-card">
+<div class="vision-icon">📊</div>
+<h4>خفض البطالة إلى 7%</h4>
+<p>تُسرّع مطابقة الباحثين عن عمل بدقة 3× أسرع من الطرق التقليدية.</p>
+</div>
+<div class="vision-card">
+<div class="vision-icon">♿</div>
+<h4>تمكين ذوي الإعاقة</h4>
+<p>أوّل منصة سعودية بمسارات مخصصة لإدماجهم في سوق العمل.</p>
+</div>
+<div class="vision-card">
+<div class="vision-icon">👩‍💼</div>
+<h4>رفع مشاركة المرأة</h4>
+<p>مسارات مخصصة لتمكين المرأة من دخول القطاعات الناشئة.</p>
+</div>
+<div class="vision-card">
+<div class="vision-icon">🤝</div>
+<h4>دمج الضمان الاجتماعي</h4>
+<p>تحويل المستفيدين من اعتماد على الدعم إلى منتجين فعليين.</p>
+</div>
+<div class="vision-card">
+<div class="vision-icon">🔧</div>
+<h4>السعودة بكفاءة</h4>
+<p>تخطيط استباقي للسعودة بدلاً من الغرامات التفاعلية.</p>
+</div>
+<div class="vision-card">
+<div class="vision-icon">🤖</div>
+<h4>استراتيجية SDAIA</h4>
+<p>نموذج سعودي للذكاء الاصطناعي المُوجَّه للنفع الاجتماعي والاقتصادي.</p>
+</div>
+<div class="vision-card">
+<div class="vision-icon">🌍</div>
+<h4>التصدير الإقليمي</h4>
+<p>النموذج يُنسخ لدول الخليج بتخصيص بسيط — مضاعفة السوق.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ROADMAP -->
+<section id="roadmap">
+<div class="container">
+<span class="section-num">07 — خطة التنفيذ</span>
+<h2 class="section-title">من الفكرة للسوق في 12 شهراً</h2>
+<p class="section-intro">خطة مدروسة تبدأ بنموذج أوّلي مُثبَت، ثم تتوسع عبر شراكات استراتيجية.</p>
+
+<div class="roadmap">
+<div class="phase">
+<span class="phase-tag">المرحلة 1</span>
+<div class="phase-time">شهور 1–3</div>
+<h4>🏗️ التأسيس والبناء</h4>
+<ul>
+<li>بناء MVP (محلل الفجوة + خريطة المسار + Blockchain)</li>
+<li>تحليل قاعدة بيانات السوق (+50K وظيفة)</li>
+<li>تسجيل الملكية الفكرية والعلامة التجارية</li>
+<li>شراكة مع 3 جهات تدريب محلية</li>
+<li>تشكيل الفريق (AI + Product + Sales)</li>
+</ul>
+</div>
+
+<div class="phase">
+<span class="phase-tag">المرحلة 2</span>
+<div class="phase-time">شهور 4–6</div>
+<h4>🚀 الإطلاق التجريبي</h4>
+<ul>
+<li>إطلاق Beta لـ 500 مستخدم في الرياض وجدة</li>
+<li>إطلاق التحديات المهارية مع 5 شركات</li>
+<li>التفاوض المبدئي مع وزارة الموارد البشرية وهدف</li>
+<li>إطلاق شهادة الجاهزية الموثّقة blockchain</li>
+<li>تحسين نماذج AI بناءً على بيانات الاستخدام</li>
+</ul>
+</div>
+
+<div class="phase">
+<span class="phase-tag">المرحلة 3</span>
+<div class="phase-time">شهور 7–9</div>
+<h4>📈 التوسع والشراكات</h4>
+<ul>
+<li>إطلاق منتج B2B (لوحة فجوات الموارد البشرية)</li>
+<li>إتمام عقد مع جهة حكومية</li>
+<li>إطلاق مسارات ذوي الإعاقة + دمج الضمان</li>
+<li>الوصول لـ 5,000 مستخدم نشط و50 شركة</li>
+<li>إطلاق مؤشر جاهزية المناطق العامّ</li>
+</ul>
+</div>
+
+<div class="phase">
+<span class="phase-tag">المرحلة 4</span>
+<div class="phase-time">شهور 10–12</div>
+<h4>💰 التوسع و Series A</h4>
+<ul>
+<li>الوصول لـ 15,000 مستخدم نشط</li>
+<li>جولة Series A بتقييم مستهدف 150M ريال</li>
+<li>التوسع للرياض وجدة والدمام بالكامل</li>
+<li>دراسة التوسع الخليجي (الإمارات أولاً)</li>
+<li>تقديم النموذج للاندماج مع منظومة جدارات</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+<div class="container">
+<div class="cta-section">
+<span class="section-num">08 — العرض الاستثماري</span>
+<h2>فرصة استثمارية لن تتكرر</h2>
+<p class="cta-tagline">منصة وطنية متكاملة جاهزة للإطلاق — تجمع الفرد والشركة والحكومة في منظومة واحدة، تتوافق مع رؤية 2030 وتفتح أبواب التوسع الخليجي.</p>
+
+<div class="cta-includes">
+يشمل النموذج: <strong>دراسة الجدوى الكاملة</strong> · <strong>تحليل السوق</strong> · <strong>الخوارزميات الأساسية</strong><br>
+<strong>نموذج العمل التجاري</strong> · <strong>استراتيجية الدخول</strong> · <strong>الملكية الفكرية المسجّلة</strong><br>
+<strong>12 محرك ذكاء اصطناعي</strong> · <strong>توثيق Blockchain</strong> · <strong>جسر المنظومة الحكومية</strong>
+</div>
+
+<div class="cta-stats">
+<div class="cta-stat">
+<div class="cta-stat-num">+4M</div>
+<div class="cta-stat-lbl">عميل محتمل فوري</div>
+</div>
+<div class="cta-stat">
+<div class="cta-stat-num">57M ر</div>
+<div class="cta-stat-lbl">إيرادات متوقعة (السنة 3)</div>
+</div>
+<div class="cta-stat">
+<div class="cta-stat-num">0</div>
+<div class="cta-stat-lbl">منافس مباشر في السوق</div>
+</div>
+</div>
+
+<a href="mailto:invest@arkane-ai.com" class="btn">📩 تواصل للاستثمار الآن</a>
+</div>
+</div>
+</section>
+
+<footer>
+ARKANE AI — STRATEGIC INTELLIGENCE © 2026
+</footer>
+
+</body>
+</html>
